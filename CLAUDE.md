@@ -1,29 +1,29 @@
-# AgentNotch Project Notes
+# CodexNotch Project Notes
 
-AgentNotch is a native macOS SwiftUI app that displays local coding-agent
+CodexNotch is a native macOS SwiftUI app that displays local coding-agent
 activity in a compact notch-style panel.
 
 ## Main Areas
 
-- `AgentNotch/Core/Codex/CodexManager.swift`
+- `CodexNotch/Core/Codex/CodexManager.swift`
   Reads Codex JSONL sessions from `~/.codex/sessions`, tracks tools, thinking
   state, token usage, task completion, and Codex rate-limit windows.
 
-- `AgentNotch/Core/ClaudeCode/ClaudeCodeManager.swift`
+- `CodexNotch/Core/ClaudeCode/ClaudeCodeManager.swift`
   Reads Claude Code JSONL sessions from `~/.claude/projects`, tracks tools,
   todos, thinking state, permission waits, and completion state.
 
-- `AgentNotch/Core/Telemetry`
+- `CodexNotch/Core/Telemetry`
   Runs a local OTLP HTTP receiver on port `4318` and decodes OTLP logs/metrics.
 
-- `AgentNotch/Core/Coordinators/UICoordinator.swift`
+- `CodexNotch/Core/Coordinators/UICoordinator.swift`
   Owns the notch panel, display selection, screen-change handling, and menu bar
   fallback setup.
 
-- `AgentNotch/Views/Notch/AgentNotchContentView.swift`
+- `CodexNotch/Views/Notch/CodexNotchContentView.swift`
   Main notch UI for compact, peeking, and expanded states.
 
-- `AgentNotch/Core/Settings/AppSettings.swift`
+- `CodexNotch/Core/Settings/AppSettings.swift`
   User defaults backed by `@AppStorage`.
 
 ## Display Behavior
@@ -42,8 +42,8 @@ or user-specific paths beyond documented local session locations like
 
 ```bash
 xcodebuild \
-  -project AgentNotch.xcodeproj \
-  -scheme AgentNotch \
+  -project CodexNotch.xcodeproj \
+  -scheme CodexNotch \
   -configuration Release \
   CODE_SIGNING_ALLOWED=NO \
   build

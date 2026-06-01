@@ -1,12 +1,12 @@
-# AgentNotch
+# CodexNotch
 
 A tiny native macOS notch companion for Codex and Claude Code sessions.
 
-AgentNotch sits at the top of your display and gives you a compact, glanceable
+CodexNotch sits at the top of your display and gives you a compact, glanceable
 view of what your coding agent is doing: thinking, running tools, waiting for
 permission, using quota, or finishing a task.
 
-![AgentNotch screenshot](docs/screenshot.png)
+![CodexNotch screenshot](docs/screenshot.png)
 
 ## Highlights
 
@@ -27,12 +27,12 @@ The compact state stays small for day-to-day use while still showing active
 tool state and Codex remaining usage. Hover or click to open the detail view
 with recent tools, context, and session footer.
 
-![AgentNotch compact usage](docs/usage.png)
+![CodexNotch compact usage](docs/usage.png)
 
 ## Codex Usage
 
-AgentNotch shows the remaining Codex quota instead of the amount already used.
-For example, if Codex reports that 3% has been used, AgentNotch displays `97%`
+CodexNotch shows the remaining Codex quota instead of the amount already used.
+For example, if Codex reports that 3% has been used, CodexNotch displays `97%`
 remaining. The compact chips cover both the rolling 5 hour window and the 1 week
 window.
 
@@ -49,22 +49,22 @@ window.
 ## Build From Source
 
 ```bash
-git clone https://github.com/kuwe77/agentnotch.git
-cd agentnotch
+git clone https://github.com/kuwe77/CodexNotch.git
+cd CodexNotch
 xcodebuild \
-  -project AgentNotch.xcodeproj \
-  -scheme AgentNotch \
+  -project CodexNotch.xcodeproj \
+  -scheme CodexNotch \
   -configuration Release \
   CODE_SIGNING_ALLOWED=NO \
   build
 ```
 
 The built app will be under Xcode's build products directory. You can also open
-`AgentNotch.xcodeproj` in Xcode and run the `AgentNotch` scheme.
+`CodexNotch.xcodeproj` in Xcode and run the `CodexNotch` scheme.
 
 ## Codex Setup
 
-AgentNotch can read Codex session JSONL files directly. For OTLP log ingestion,
+CodexNotch can read Codex session JSONL files directly. For OTLP log ingestion,
 configure Codex with:
 
 ```toml
@@ -97,7 +97,7 @@ Useful options:
 
 ## Privacy
 
-AgentNotch is local-first. It reads local agent session logs and listens for
+CodexNotch is local-first. It reads local agent session logs and listens for
 local OTLP telemetry on your machine. It does not send telemetry, prompts, tool
 calls, usage data, or file paths to a hosted service.
 
@@ -107,7 +107,7 @@ patterns are ignored by `.gitignore`.
 
 ## Attribution
 
-This project is based on the open-source AgentNotch app by AppGram and has been
+This project is based on the open-source notch telemetry app by AppGram and has been
 adapted for a Codex-focused desktop workflow with additional JSONL tracking,
 usage display, completion handling, display selection, and compact UI changes.
 
