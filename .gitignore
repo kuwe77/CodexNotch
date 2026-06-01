@@ -1,0 +1,49 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+xcuserdata/
+
+# Build products
+build/
+DerivedData/
+dist/
+archives/
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+*.idea/
+*.swp
+*.swo
+*~
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.key
+*.token
+secrets.*
+config.local.*
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
